@@ -30,7 +30,7 @@ setup(
     packages=['lib'],
     entry_points={
         'console_scripts': [
-            'learnpython = lib.tasker:main',
+            'learnpython = lib.source.tasker:main',
         ]
     },
 )
