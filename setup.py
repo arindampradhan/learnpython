@@ -27,7 +27,7 @@ setup(
     maintainer_email=lib.__maintainer_email__,
     url=lib.__url__,
     license='MIT',
-    packages=['lib'],
+    packages=['lib','lib.source'],
     entry_points={
         'console_scripts': [
             'learnpython = lib.source.tasker:main',
