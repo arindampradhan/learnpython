@@ -1,3 +1,0 @@
-        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-        X      your solution is correct!    X
-        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX        

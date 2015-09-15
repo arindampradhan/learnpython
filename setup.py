@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import lib
+import learnpython
 try:
     from setuptools import setup
 except ImportError:
@@ -20,17 +20,17 @@ setup(
     ],
 
     keywords='weather',
-    version=lib.__version__,
-    author=lib.__author__,
-    author_email=lib.__author_email__,
-    maintainer=lib.__maintainer__,
-    maintainer_email=lib.__maintainer_email__,
-    url=lib.__url__,
+    version=learnpython.__version__,
+    author=learnpython.__author__,
+    author_email=learnpython.__author_email__,
+    maintainer=learnpython.__maintainer__,
+    maintainer_email=learnpython.__maintainer_email__,
+    url=learnpython.__url__,
     license='MIT',
-    packages=['lib','lib.source'],
+    packages=['learnpython','learnpython.learnpython'],
     entry_points={
         'console_scripts': [
-            'learnpython = lib.source.tasker:main',
+            'learnpython = learnpython.learnpython.tasker:main',
         ]
     },
 )
