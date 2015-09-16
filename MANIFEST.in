@@ -1,0 +1,3 @@
+recursive-include learnpython/problems *
+recursive-include learnpython/solutions *
+include learnpython/lib/config.ini

@@ -18,7 +18,8 @@ setup(
         "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
     ],
-
+    package_data={'': ['license.txt']},
+    include_package_data=True,
     keywords='weather',
     version=learnpython.__version__,
     author=learnpython.__author__,
@@ -27,10 +28,10 @@ setup(
     maintainer_email=learnpython.__maintainer_email__,
     url=learnpython.__url__,
     license='MIT',
-    packages=['learnpython','learnpython.learnpython'],
+    packages=['learnpython','learnpython.lib','learnpython.problems','learnpython.solutions'],
     entry_points={
         'console_scripts': [
-            'learnpython = learnpython.learnpython.tasker:main',
+            'learnpython = learnpython.lib.tasker:main',
         ]
     },
 )

@@ -20,6 +20,9 @@ import settings
 LINER = settings.LINER
 TITLE = settings.TITLE
 PROBLEMS = settings.PROBLEMS
+BASE_DIR = settings.BASE_DIR
+
+tasker_file = os.path.join(BASE_DIR,'tasker.py')
 
 class cmenu(object):
     datum = {}
@@ -109,7 +112,7 @@ class CursesWindow(object):
 def help():
     c.screen.clear()     # nope
     curses.endwin()
-    subprocess.call('python tasker.py help',shell=True)
+    subprocess.call( 'python {} help'.format(tasker_file),shell=True)
     sys.exit()
 
 def exit():
@@ -123,7 +126,7 @@ def task():
     curses.endwin()
     problem = problem.lower().replace(' ', '-')
     update(problem)
-    subprocess.call('python tasker.py '+ problem,shell=True)
+    subprocess.call('python {} '.format(tasker_file)+ problem,shell=True)
     sys.exit()
 
 def create_list(PROBLEMS):

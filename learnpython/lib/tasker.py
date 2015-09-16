@@ -4,8 +4,11 @@ import os
 import settings
 from config_tracker import get_problem
 
+
 BASE_DIR = settings.ROOT_DIR # keeping learnpython as basedir in this file
 PROBLEMS = settings.PROBLEMS
+menu_file = os.path.join(BASE_DIR,'lib','menu.py')
+
 
 def readsolnfile(dirname):
 	with open(os.path.join(BASE_DIR,'problems',dirname,'solution.md'), 'r') as fin:
@@ -37,8 +40,8 @@ def checker():
 def main():
 	problem = get_problem()
 	if len(sys.argv) == 1:
-		os.system('python menu.py')
-		os.exit()
+		os.system('python {}'.format(menu_file))
+		sys.exit()
 	if len(sys.argv) > 3:
 		print "Usage: learnpython verify program.py"
 		sys.exit()
@@ -55,7 +58,7 @@ def main():
 			readprobfile(problem)
 			sys.exit(1)
 		else:
-			os.system('python menu.py')
+			os.system('python {}'.format(menu_file))
 
 
 if __name__ == "__main__":
